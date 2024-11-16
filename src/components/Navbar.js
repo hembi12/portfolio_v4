@@ -2,8 +2,10 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import classNames from 'classnames';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+    const { t, i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
 
@@ -11,22 +13,25 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
-    // Lista de enlaces de navegación con ID para cada sección, usando useMemo para evitar recrearlo en cada render
-    const navLinks = useMemo(() => [
-        { href: "#home", id: "home", label: "Home" },
-        { href: "#about", id: "about", label: "About" },
-        { href: "#skills", id: "skills", label: "Skills" },
-        { href: "#projects", id: "projects", label: "Projects" },
-        { href: "#resume", id: "resume", label: "Resume" },
-        { href: "#contact", id: "contact", label: "Contact" },
-    ], []);
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
 
-    // Monitorear el desplazamiento para detectar la sección activa
+    // Lista de enlaces de navegación con ID para cada sección
+    const navLinks = useMemo(() => [
+        { href: "#home", id: "home", label: t('navbar.home') },
+        { href: "#about", id: "about", label: t('navbar.about') },
+        { href: "#skills", id: "skills", label: t('navbar.skills') },
+        { href: "#projects", id: "projects", label: t('navbar.projects') },
+        { href: "#resume", id: "resume", label: t('navbar.resume') },
+        { href: "#contact", id: "contact", label: t('navbar.contact') },
+    ], [t]);
+
+    // Detectar la sección activa al hacer scroll
     useEffect(() => {
         const handleScroll = () => {
-            const scrollPosition = window.scrollY + 100; // Offset para la precisión
+            const scrollPosition = window.scrollY + 100;
 
-            // Detectar la sección activa comparando el scrollPosition con el offset de cada sección
             const currentSection = navLinks.find(({ id }) => {
                 const section = document.getElementById(id);
                 if (section) {
@@ -69,13 +74,24 @@ const Navbar = () => {
                                 href={link.href} 
                                 className={classNames(
                                     "text-gray-300 hover:text-white hover:font-bold transition-colors duration-200",
-                                    { "underline font-bold": activeSection === link.id } // Estilo para el enlace activo
+                                    { "underline font-bold": activeSection === link.id }
                                 )}
                             >
                                 {link.label}
                             </a>
                         </li>
                     ))}
+                    {/* Dropdown de idioma con estilo de Tailwind */}
+                    <li>
+                        <select
+                            onChange={(e) => changeLanguage(e.target.value)}
+                            value={i18n.language}
+                            className="bg-indigo-950 text-gray-300 hover:text-white hover:font-bold transition-colors duration-200 border-none focus:ring-0"
+                        >
+                            <option value="en">English</option>
+                            <option value="es-MX">Español</option>
+                        </select>
+                    </li>
                 </ul>
             </div>
 
@@ -108,14 +124,25 @@ const Navbar = () => {
                                 href={link.href} 
                                 className={classNames(
                                     "block text-gray-300 hover:text-white text-lg font-medium transition-colors duration-200",
-                                    { "underline font-bold": activeSection === link.id } // Estilo para el enlace activo en el menú off-canvas
+                                    { "underline font-bold": activeSection === link.id }
                                 )}
-                                onClick={() => setIsOpen(false)} // Cierra el menú al hacer clic en un enlace
+                                onClick={() => setIsOpen(false)}
                             >
                                 {link.label}
                             </a>
                         </li>
                     ))}
+                    {/* Selector de idioma en el menú off-canvas con estilo de enlace */}
+                    <li className="mt-4">
+                        <select
+                            onChange={(e) => changeLanguage(e.target.value)}
+                            value={i18n.language}
+                            className="block w-full bg-indigo-950 text-gray-300 hover:text-white text-lg font-medium transition-colors duration-200 border-none focus:ring-0 cursor-pointer"
+                        >
+                            <option value="en">English</option>
+                            <option value="es-MX">Español</option>
+                        </select>
+                    </li>
                 </ul>
             </div>
         </nav>

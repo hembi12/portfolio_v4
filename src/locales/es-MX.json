@@ -1,0 +1,22 @@
+{
+    "navbar": {
+        "home": "Inicio",
+        "about": "Acerca de",
+        "skills": "Habilidades",
+        "projects": "Proyectos",
+        "resume": "Currículum",
+        "contact": "Contacto"
+    },
+    "home": {
+        "name": "Héctor Martil",
+        "typedStrings": [
+            "Desarrollador Web",
+            "Desarrollador Frontend",
+            "Desarrollador Backend",
+            "Desarrollador Junior",
+            "Entusiasta Full Stack"
+        ],
+        "projectsButton": "Mis Proyectos",
+        "contactButton": "Contáctame"
+    }
+}

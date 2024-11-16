@@ -1,0 +1,22 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "projects": "Projects",
+        "resume": "Resume",
+        "contact": "Contact"
+    },
+    "home": {
+        "name": "Héctor Martil",
+        "typedStrings": [
+            "Web Developer",
+            "Frontend Developer",
+            "Backend Developer",
+            "Junior Developer",
+            "Full Stack Enthusiast"
+        ],
+        "projectsButton": "My Projects",
+        "contactButton": "Contact Me"
+    }
+}

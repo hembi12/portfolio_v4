@@ -1,6 +1,7 @@
 // src/App.js
 import React, { useState, useEffect } from 'react';
-import { throttle } from 'lodash'; 
+import { throttle } from 'lodash';
+import './i18n';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
