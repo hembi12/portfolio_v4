@@ -1,5 +1,6 @@
 // src/components/Projects.js
 import React, { useState } from 'react';
+import { projectData } from '../data/data'; // Importar projectData desde data.js
 
 const Projects = () => {
     const [showMore, setShowMore] = useState(false);
@@ -24,58 +25,6 @@ const Projects = () => {
         "PHP": "bg-purple-100 text-purple-500 border-purple-500",
         "Laravel": "bg-red-100 text-red-600 border-red-600",
     };
-
-    const projectData = [
-        {
-            title: "Project 1",
-            description: "A brief description of the project.",
-            imageUrl: "/path/to/image1.jpg",
-            projectUrl: "https://project1.example.com",
-            repoUrl: "https://github.com/username/project1",
-            technologies: ["React", "Tailwind", "Node.js"]
-        },
-        {
-            title: "Project 2",
-            description: "A brief description of the project.",
-            imageUrl: "/path/to/image2.jpg",
-            projectUrl: "https://project2.example.com",
-            repoUrl: "https://github.com/username/project2",
-            technologies: ["Vue.js", "Firebase", "JavaScript"]
-        },
-        {
-            title: "Project 3",
-            description: "A brief description of the third project, showcasing additional features and details.",
-            imageUrl: "/path/to/image3.jpg",
-            projectUrl: "https://project3.example.com",
-            repoUrl: "https://github.com/username/project3",
-            technologies: ["Angular", "TypeScript", "Express", "MongoDB"]
-        },
-        // Proyectos adicionales ocultos inicialmente
-        {
-            title: "Project 4",
-            description: "This is a hidden project that becomes visible on clicking View More.",
-            imageUrl: "/path/to/image4.jpg",
-            projectUrl: "https://project4.example.com",
-            repoUrl: "https://github.com/username/project4",
-            technologies: ["Python", "Django", "PostgreSQL"]
-        },
-        {
-            title: "Project 5",
-            description: "Another additional project with hidden visibility initially.",
-            imageUrl: "/path/to/image5.jpg",
-            projectUrl: "https://project5.example.com",
-            repoUrl: "https://github.com/username/project5",
-            technologies: ["Java", "Spring Boot", "MySQL"]
-        },
-        {
-            title: "Project 6",
-            description: "Final additional project with cool features and design.",
-            imageUrl: "/path/to/image6.jpg",
-            projectUrl: "https://project6.example.com",
-            repoUrl: "https://github.com/username/project6",
-            technologies: ["PHP", "Laravel", "Vue.js"]
-        }
-    ];
 
     // Proyectos principales y adicionales
     const mainProjects = projectData.slice(0, 3);
