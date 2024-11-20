@@ -31,48 +31,48 @@ export const skillsData = {
 // Datos de proyectos
 export const projectData = [
     {
-        title: "Project 1",
-        description: "A brief description of the project.",
+        title: "projects.project1.title",
+        description: "projects.project1.description",
         imageUrl: "/path/to/image1.jpg",
         projectUrl: "https://project1.example.com",
         repoUrl: "https://github.com/username/project1",
         technologies: ["React", "Tailwind", "Node.js"]
     },
     {
-        title: "Project 2",
-        description: "A brief description of the project.",
+        title: "projects.project2.title",
+        description: "projects.project2.description",
         imageUrl: "/path/to/image2.jpg",
         projectUrl: "https://project2.example.com",
         repoUrl: "https://github.com/username/project2",
         technologies: ["Vue.js", "Firebase", "JavaScript"]
     },
     {
-        title: "Project 3",
-        description: "A brief description of the third project, showcasing additional features and details.",
+        title: "projects.project3.title",
+        description: "projects.project3.description",
         imageUrl: "/path/to/image3.jpg",
         projectUrl: "https://project3.example.com",
         repoUrl: "https://github.com/username/project3",
         technologies: ["Angular", "TypeScript", "Express", "MongoDB"]
     },
     {
-        title: "Project 4",
-        description: "This is a hidden project that becomes visible on clicking View More.",
+        title: "projects.project4.title",
+        description: "projects.project4.description",
         imageUrl: "/path/to/image4.jpg",
         projectUrl: "https://project4.example.com",
         repoUrl: "https://github.com/username/project4",
         technologies: ["Python", "Django", "PostgreSQL"]
     },
     {
-        title: "Project 5",
-        description: "Another additional project with hidden visibility initially.",
+        title: "projects.project5.title",
+        description: "projects.project5.description",
         imageUrl: "/path/to/image5.jpg",
         projectUrl: "https://project5.example.com",
         repoUrl: "https://github.com/username/project5",
         technologies: ["Java", "Spring Boot", "MySQL"]
     },
     {
-        title: "Project 6",
-        description: "Final additional project with cool features and design.",
+        title: "projects.project6.title",
+        description: "projects.project6.description",
         imageUrl: "/path/to/image6.jpg",
         projectUrl: "https://project6.example.com",
         repoUrl: "https://github.com/username/project6",

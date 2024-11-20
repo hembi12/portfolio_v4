@@ -18,5 +18,119 @@
         ],
         "projectsButton": "My Projects",
         "contactButton": "Contact Me"
+    },
+    "about": {
+        "title": "About Me",
+        "description": "I'm a dedicated and passionate Mexican web developer focused on creating efficient, user-centered applications. My expertise spans both frontend and backend development, allowing me to build full-stack solutions that are visually appealing and functionally robust.",
+        "coreValuesTitle": "Core Values",
+        "values": {
+            "innovationTitle": "Innovation",
+            "innovationDescription": "Constantly seeking new and better solutions to improve user experiences.",
+            "collaborationTitle": "Collaboration",
+            "collaborationDescription": "Believing in the power of teamwork and open communication to achieve the best results.",
+            "qualityTitle": "Commitment to Quality",
+            "qualityDescription": "Dedicated to writing clean, efficient, and maintainable code.",
+            "learningTitle": "Continuous Learning",
+            "learningDescription": "Always expanding my skill set to stay at the forefront of web technology."
+        }
+    },
+    "skills": {
+        "title": "Skills",
+        "description": "Technologies and tools I've used in my projects.",
+        "categories": {
+            "Frontend": "Frontend",
+            "Backend": "Backend",
+            "Databases": "Databases",
+            "Tools": "Tools"
+        },
+        "technologies": {
+            "JavaScript": "JavaScript",
+            "React": "React",
+            "Tailwind": "Tailwind",
+            "Bootstrap": "Bootstrap",
+            "Python": "Python",
+            "TypeScript": "TypeScript",
+            "Node.js": "Node.js",
+            "Java": "Java",
+            "Firebase": "Firebase",
+            "MySQL": "MySQL",
+            "MongoDB": "MongoDB",
+            "PostgreSQL": "PostgreSQL",
+            "Git": "Git",
+            "VSC": "Visual Studio Code",
+            "Docker": "Docker",
+            "Jenkins": "Jenkins"
+        }
+    },
+    "projects": {
+        "title": "Projects",
+        "description": "The following projects were developed and published by me.",
+        "viewButton": "View",
+        "repoButton": "Repo",
+        "viewMoreButton": "View More",
+        "viewLessButton": "View Less",
+        "project1": {
+            "title": "Project 1",
+            "description": "A brief description of the project."
+        },
+        "project2": {
+            "title": "Project 2",
+            "description": "A brief description of the project."
+        },
+        "project3": {
+            "title": "Project 3",
+            "description": "A brief description of the third project, showcasing additional features and details."
+        },
+        "project4": {
+            "title": "Project 4",
+            "description": "This is a hidden project that becomes visible on clicking View More."
+        },
+        "project5": {
+            "title": "Project 5",
+            "description": "Another additional project with hidden visibility initially."
+        },
+        "project6": {
+            "title": "Project 6",
+            "description": "Final additional project with cool features and design."
+        }
+    },
+    "resume": {
+        "title": "Resume",
+        "description": "View or download my resume for more details.",
+        "viewButton": "View",
+        "downloadButton": "Download"
+    },
+    "contact": {
+        "title": "Contact Me",
+        "description": "Send me an email or message to discuss possible collaborations.",
+        "directEmail": "Direct email",
+        "successMessage": "Thank you! Your message has been sent.",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "subject": "Subject",
+            "message": "Message",
+            "namePlaceholder": "John Doe",
+            "emailPlaceholder": "example@example.com",
+            "subjectPlaceholder": "Select a subject",
+            "messagePlaceholder": "Please provide details about your project or inquiry...",
+            "sendButton": "Send",
+            "options": {
+                "project": "Project Collaboration",
+                "freelance": "Freelance Work",
+                "job": "Job Opportunity",
+                "general": "General Inquiry"
+            }
+        },
+        "errors": {
+            "name": "Name is required",
+            "email": "Email is required",
+            "emailInvalid": "Email format is invalid",
+            "subject": "Please select a subject",
+            "message": "Message is required"
+        }
+    },
+    "footer": {
+        "rightsReserved": "All rights reserved."
     }
 }

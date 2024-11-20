@@ -1,6 +1,7 @@
 // src/components/Skills.js
 import React from 'react';
-import { skillsData } from '../data/data'; // Importa skillsData desde data.js
+import { useTranslation } from 'react-i18next';
+import { skillsData } from '../data/data';
 
 // Importación de íconos individuales
 import { FaReact, FaNodeJs, FaGitAlt, FaBootstrap, FaPython, FaJava, FaDocker } from 'react-icons/fa';
@@ -27,20 +28,22 @@ const icons = {
 };
 
 const Skills = () => {
+    const { t } = useTranslation();
+
     return (
         <section id="skills" className="py-20 bg-indigo-50 px-6">
             <div className="container mx-auto text-center">
                 <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold mb-4" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.3)' }}>
-                    Skills
+                    {t('skills.title')}
                 </h2>
 
                 <p className="text-center text-gray-700 mb-8">
-                    Technologies and tools I've used in my projects.
+                    {t('skills.description')}
                 </p>
 
                 {Object.keys(skillsData).map((category) => (
                     <div key={category} className="mb-8">
-                        <h3 className="text-xl font-semibold text-gray-700 mb-4">{category}</h3>
+                        <h3 className="text-xl font-semibold text-gray-700 mb-4">{t(`skills.categories.${category}`)}</h3>
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                             {skillsData[category].map((skill, index) => (
                                 <div
@@ -50,7 +53,7 @@ const Skills = () => {
                                     <div className="text-4xl mb-2">
                                         {React.createElement(icons[skill.icon])} {/* Creación dinámica del ícono */}
                                     </div>
-                                    <h4 className="text-lg font-semibold">{skill.name}</h4>
+                                    <h4 className="text-lg font-semibold">{t(`skills.technologies.${skill.name}`)}</h4>
                                 </div>
                             ))}
                         </div>

@@ -1,8 +1,10 @@
 // src/components/Projects.js
 import React, { useState } from 'react';
-import { projectData } from '../data/data'; // Importar projectData desde data.js
+import { useTranslation } from 'react-i18next';
+import { projectData } from '../data/data';
 
 const Projects = () => {
+    const { t } = useTranslation();
     const [showMore, setShowMore] = useState(false);
 
     const techColors = {
@@ -26,7 +28,6 @@ const Projects = () => {
         "Laravel": "bg-red-100 text-red-600 border-red-600",
     };
 
-    // Proyectos principales y adicionales
     const mainProjects = projectData.slice(0, 3);
     const additionalProjects = projectData.slice(3);
 
@@ -34,11 +35,11 @@ const Projects = () => {
         <section id="projects" className="py-20 bg-white px-6">
             <div className="container mx-auto">
                 <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-center mb-4" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.3)' }}>
-                    Projects
+                    {t('projects.title')}
                 </h2>
 
                 <p className="text-center text-gray-700 mb-8">
-                    The following projects were developed and published by me.
+                    {t('projects.description')}
                 </p>
 
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -51,20 +52,20 @@ const Projects = () => {
                             </div>
 
                             <div className="relative">
-                                <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover" />
+                                <img src={project.imageUrl} alt={t(project.title)} className="w-full h-48 object-cover" />
                                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center space-x-4 opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-50">
                                     <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="bg-indigo-600 text-white px-4 py-2 font-semibold rounded-full hover:bg-indigo-800 hover:text-white transition-colors">
-                                        View
+                                        {t('projects.viewButton')}
                                     </a>
                                     <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="border border-indigo-600 text-indigo-600 px-4 py-2 font-semibold rounded-full hover:bg-indigo-800 hover:text-white transition-colors">
-                                        Repo
+                                        {t('projects.repoButton')}
                                     </a>
                                 </div>
                             </div>
 
                             <div className="p-4">
-                                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                                <p className="text-gray-700 mb-4">{project.description}</p>
+                                <h3 className="text-xl font-semibold mb-2">{t(project.title)}</h3>
+                                <p className="text-gray-700 mb-4">{t(project.description)}</p>
 
                                 <div className="flex flex-wrap gap-2">
                                     {project.technologies.map((tech, techIndex) => (
@@ -89,20 +90,20 @@ const Projects = () => {
                             </div>
 
                             <div className="relative">
-                                <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover" />
+                                <img src={project.imageUrl} alt={t(project.title)} className="w-full h-48 object-cover" />
                                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center space-x-4 opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-50">
                                     <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="bg-indigo-600 text-white px-4 py-2 font-semibold rounded-full hover:bg-indigo-800 hover:text-white transition-colors">
-                                        View
+                                        {t('projects.viewButton')}
                                     </a>
                                     <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="border border-indigo-600 text-indigo-600 px-4 py-2 font-semibold rounded-full hover:bg-indigo-800 hover:text-white transition-colors">
-                                        Repo
+                                        {t('projects.repoButton')}
                                     </a>
                                 </div>
                             </div>
 
                             <div className="p-4">
-                                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                                <p className="text-gray-700 mb-4">{project.description}</p>
+                                <h3 className="text-xl font-semibold mb-2">{t(project.title)}</h3>
+                                <p className="text-gray-700 mb-4">{t(project.description)}</p>
 
                                 <div className="flex flex-wrap gap-2">
                                     {project.technologies.map((tech, techIndex) => (
@@ -124,7 +125,7 @@ const Projects = () => {
                         onClick={() => setShowMore(!showMore)}
                         className="bg-indigo-600 text-white px-6 py-2 font-semibold rounded-full shadow-lg hover:bg-indigo-800 hover:shadow-2xl transition-colors"
                     >
-                        {showMore ? "View Less" : "View More"}
+                        {showMore ? t('projects.viewLessButton') : t('projects.viewMoreButton')}
                     </button>
                 </div>
             </div>

@@ -18,5 +18,119 @@
         ],
         "projectsButton": "Mis Proyectos",
         "contactButton": "Contáctame"
+    },
+    "about": {
+        "title": "Acerca de Mí",
+        "description": "Soy un desarrollador web mexicano, dedicado y apasionado, enfocado en crear aplicaciones eficientes y centradas en el usuario. Mi experiencia abarca tanto el desarrollo frontend como backend, lo que me permite construir soluciones full-stack que son visualmente atractivas y funcionalmente robustas.",
+        "coreValuesTitle": "Valores Clave",
+        "values": {
+            "innovationTitle": "Innovación",
+            "innovationDescription": "Constantemente buscando nuevas y mejores soluciones para mejorar la experiencia del usuario.",
+            "collaborationTitle": "Colaboración",
+            "collaborationDescription": "Creyendo en el poder del trabajo en equipo y la comunicación abierta para lograr los mejores resultados.",
+            "qualityTitle": "Compromiso con la Calidad",
+            "qualityDescription": "Dedicado a escribir código limpio, eficiente y mantenible.",
+            "learningTitle": "Aprendizaje Continuo",
+            "learningDescription": "Siempre ampliando mi conjunto de habilidades para mantenerme a la vanguardia de la tecnología web."
+        }
+    },
+    "skills": {
+        "title": "Habilidades",
+        "description": "Tecnologías y herramientas que he utilizado en mis proyectos.",
+        "categories": {
+            "Frontend": "Frontend",
+            "Backend": "Backend",
+            "Databases": "Bases de Datos",
+            "Tools": "Herramientas"
+        },
+        "technologies": {
+            "JavaScript": "JavaScript",
+            "React": "React",
+            "Tailwind": "Tailwind",
+            "Bootstrap": "Bootstrap",
+            "Python": "Python",
+            "TypeScript": "TypeScript",
+            "Node.js": "Node.js",
+            "Java": "Java",
+            "Firebase": "Firebase",
+            "MySQL": "MySQL",
+            "MongoDB": "MongoDB",
+            "PostgreSQL": "PostgreSQL",
+            "Git": "Git",
+            "VSC": "Visual Studio Code",
+            "Docker": "Docker",
+            "Jenkins": "Jenkins"
+        }
+    },
+    "projects": {
+        "title": "Proyectos",
+        "description": "Los siguientes proyectos fueron desarrollados y publicados por mí.",
+        "viewButton": "Ver",
+        "repoButton": "Repo",
+        "viewMoreButton": "Ver Más",
+        "viewLessButton": "Ver Menos",
+        "project1": {
+            "title": "Proyecto 1",
+            "description": "Una breve descripción del proyecto."
+        },
+        "project2": {
+            "title": "Proyecto 2",
+            "description": "Una breve descripción del proyecto."
+        },
+        "project3": {
+            "title": "Proyecto 3",
+            "description": "Una breve descripción del tercer proyecto, que muestra características y detalles adicionales."
+        },
+        "project4": {
+            "title": "Proyecto 4",
+            "description": "Este es un proyecto oculto que se hace visible al hacer clic en Ver Más."
+        },
+        "project5": {
+            "title": "Proyecto 5",
+            "description": "Otro proyecto adicional inicialmente oculto."
+        },
+        "project6": {
+            "title": "Proyecto 6",
+            "description": "Proyecto final con características y diseño interesantes."
+        }
+    },
+    "resume": {
+        "title": "Currículum",
+        "description": "Visualiza o descarga mi currículum para más detalles.",
+        "viewButton": "Ver",
+        "downloadButton": "Descargar"
+    },
+    "contact": {
+        "title": "Contáctame",
+        "description": "Envíame un email o mensaje para discutir posibles colaboraciones.",
+        "directEmail": "Correo directo",
+        "successMessage": "¡Gracias! Tu mensaje ha sido enviado.",
+        "form": {
+            "name": "Nombre",
+            "email": "Correo electrónico",
+            "subject": "Asunto",
+            "message": "Mensaje",
+            "namePlaceholder": "Juan Pérez",
+            "emailPlaceholder": "ejemplo@correo.com",
+            "subjectPlaceholder": "Selecciona un asunto",
+            "messagePlaceholder": "Por favor proporciona detalles sobre tu proyecto o consulta...",
+            "sendButton": "Enviar",
+            "options": {
+                "project": "Colaboración en Proyecto",
+                "freelance": "Trabajo Freelance",
+                "job": "Oportunidad de Trabajo",
+                "general": "Consulta General"
+            }
+        },
+        "errors": {
+            "name": "El nombre es obligatorio",
+            "email": "El correo es obligatorio",
+            "emailInvalid": "El formato del correo es inválido",
+            "subject": "Por favor selecciona un asunto",
+            "message": "El mensaje es obligatorio"
+        }
+    },
+    "footer": {
+        "rightsReserved": "Todos los derechos reservados."
     }
 }
