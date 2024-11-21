@@ -83,7 +83,7 @@ const Contact = ({ isDarkMode }) => {
                         <input
                             type="text"
                             id="name"
-                            className={`w-full px-3 py-2 border shadow-md rounded-lg ${isDarkMode ? 'bg-gray-800 border-gray-600 text-gray-200' : ''}`}
+                            className={`w-full px-3 py-2 border shadow-md rounded-lg ${isDarkMode ? 'bg-gray-700 border-gray-400 text-gray-200' : ''}`}
                             placeholder={t('contact.form.namePlaceholder')}
                             value={formData.name}
                             onChange={handleChange}
@@ -95,7 +95,7 @@ const Contact = ({ isDarkMode }) => {
                         <input
                             type="email"
                             id="email"
-                            className={`w-full px-3 py-2 border shadow-md rounded-lg ${isDarkMode ? 'bg-gray-800 border-gray-600 text-gray-200' : ''}`}
+                            className={`w-full px-3 py-2 border shadow-md rounded-lg ${isDarkMode ? 'bg-gray-700 border-gray-400 text-gray-200' : ''}`}
                             placeholder={t('contact.form.emailPlaceholder')}
                             value={formData.email}
                             onChange={handleChange}
@@ -106,7 +106,7 @@ const Contact = ({ isDarkMode }) => {
                         <label className={`block font-bold mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`} htmlFor="subject">{t('contact.form.subject')}:</label>
                         <select
                             id="subject"
-                            className={`w-full px-3 py-2 border shadow-md rounded-lg ${isDarkMode ? 'bg-gray-800 border-gray-600 text-gray-200' : ''}`}
+                            className={`w-full px-3 py-2 border shadow-md rounded-lg ${isDarkMode ? 'bg-gray-700 border-gray-400 text-gray-200' : ''}`}
                             value={formData.subject}
                             onChange={handleChange}
                         >
@@ -122,7 +122,7 @@ const Contact = ({ isDarkMode }) => {
                         <label className={`block font-bold mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`} htmlFor="message">{t('contact.form.message')}:</label>
                         <textarea
                             id="message"
-                            className={`w-full px-3 py-2 border shadow-md rounded-lg ${isDarkMode ? 'bg-gray-800 border-gray-600 text-gray-200' : ''}`}
+                            className={`w-full px-3 py-2 border shadow-md rounded-lg ${isDarkMode ? 'bg-gray-700 border-gray-400 text-gray-200' : ''}`}
                             rows="5"
                             placeholder={t('contact.form.messagePlaceholder')}
                             value={formData.message}
@@ -130,16 +130,28 @@ const Contact = ({ isDarkMode }) => {
                         ></textarea>
                         {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
                     </div>
-                    <button
-                        type="submit"
-                        className={`w-full md:w-auto px-6 py-2 font-semibold rounded-full shadow-lg transition-colors ${
-                            isDarkMode
-                                ? 'bg-indigo-700 text-gray-200 hover:bg-indigo-600 hover:text-white'
-                                : 'bg-indigo-600 text-white hover:bg-indigo-800'
-                        }`}
-                    >
-                        {t('contact.form.sendButton')}
-                    </button>
+                    <div className="flex gap-4">
+                        <button
+                            type="submit"
+                            className={`w-full md:w-auto px-6 py-2 font-semibold rounded-full shadow-lg transition-colors ${
+                                isDarkMode
+                                    ? 'bg-indigo-700 text-gray-200 hover:bg-indigo-600 hover:text-white'
+                                    : 'bg-indigo-600 text-white hover:bg-indigo-800'
+                            }`}
+                        >
+                            {t('contact.form.sendButton')}
+                        </button>
+                        <a
+                            href="mailto:hectormartilb@gmail.com"
+                            className={`w-full md:w-auto px-6 py-2 text-center font-semibold rounded-full shadow-lg border transition-colors ${
+                                isDarkMode
+                                    ? 'border-indigo-400 text-indigo-400 hover:bg-indigo-600 hover:text-white'
+                                    : 'border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white'
+                            }`}
+                        >
+                            {t('contact.form.directEmailButton')}
+                        </a>
+                    </div>
                 </form>
             </div>
         </section>

@@ -53,7 +53,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
     }, [navLinks]);
 
     return (
-        <nav className={`fixed w-full z-20 top-0 shadow-2xl ${isDarkMode ? 'bg-gray-950' : 'bg-indigo-950'}`}>
+        <nav className="fixed w-full z-20 top-0 shadow-2xl bg-indigo-950">
             <div className="container mx-auto px-5 py-4 flex justify-between items-center">
                 <div
                     className="text-white text-2xl font-bold cursor-pointer relative group"
@@ -94,7 +94,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
                         <select
                             onChange={(e) => changeLanguage(e.target.value)}
                             value={i18n.language}
-                            className={`block w-full ${isDarkMode ? 'bg-gray-950' : 'bg-indigo-950'} text-gray-300 hover:text-white text-lg font-medium transition-colors duration-200 border-none focus:ring-0 cursor-pointer`}
+                            className="block w-full bg-indigo-950 text-gray-300 hover:text-white text-lg font-medium transition-colors duration-200 border-none focus:ring-0 cursor-pointer"
                         >
                             <option value="en">English</option>
                             <option value="es-MX">Español</option>
@@ -115,7 +115,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
             {/* Menú off-canvas para dispositivos móviles */}
             <div
                 className={classNames(
-                    `fixed top-0 left-0 h-full w-64 transform transition-transform duration-300 ease-in-out z-30 md:hidden ${isDarkMode ? 'bg-gray-950' : 'bg-indigo-950'}`,
+                    "fixed top-0 left-0 h-full w-64 transform transition-transform duration-300 ease-in-out z-30 md:hidden bg-indigo-950",
                     { "-translate-x-0": isOpen, "-translate-x-full": !isOpen }
                 )}
             >
@@ -144,7 +144,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
                         <select
                             onChange={(e) => changeLanguage(e.target.value)}
                             value={i18n.language}
-                            className={`block w-full ${isDarkMode ? 'bg-gray-950' : 'bg-indigo-950'} text-gray-300 hover:text-white text-lg font-medium transition-colors duration-200 border-none focus:ring-0 cursor-pointer`}
+                            className="block w-full bg-indigo-950 text-gray-300 hover:text-white text-lg font-medium transition-colors duration-200 border-none focus:ring-0 cursor-pointer"
                         >
                             <option value="en">English</option>
                             <option value="es-MX">Español</option>

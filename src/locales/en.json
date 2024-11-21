@@ -105,7 +105,6 @@
     "contact": {
         "title": "Contact Me",
         "description": "Send me an email or message to discuss possible collaborations.",
-        "directEmail": "Direct email",
         "successMessage": "Thank you! Your message has been sent.",
         "form": {
             "name": "Name",
@@ -117,6 +116,7 @@
             "subjectPlaceholder": "Select a subject",
             "messagePlaceholder": "Please provide details about your project or inquiry...",
             "sendButton": "Send",
+            "directEmailButton": "Direct Email",
             "options": {
                 "project": "Project Collaboration",
                 "freelance": "Freelance Work",

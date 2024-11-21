@@ -105,7 +105,6 @@
     "contact": {
         "title": "Contáctame",
         "description": "Envíame un email o mensaje para discutir posibles colaboraciones.",
-        "directEmail": "Correo directo",
         "successMessage": "¡Gracias! Tu mensaje ha sido enviado.",
         "form": {
             "name": "Nombre",
@@ -117,6 +116,7 @@
             "subjectPlaceholder": "Selecciona un asunto",
             "messagePlaceholder": "Por favor proporciona detalles sobre tu proyecto o consulta...",
             "sendButton": "Enviar",
+            "directEmailButton": "Email Directo",
             "options": {
                 "project": "Colaboración en Proyecto",
                 "freelance": "Trabajo Freelance",
