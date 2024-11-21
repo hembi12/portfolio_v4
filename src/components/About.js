@@ -2,13 +2,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const About = () => {
+const About = ({ isDarkMode }) => {
     const { t } = useTranslation();
 
     return (
-        <section id="about" className="py-20 bg-white px-6">
+        <section id="about" className={`py-20 px-6 ${isDarkMode ? 'bg-gray-800 text-gray-200' : 'bg-white text-gray-900'}`}>
             <div className="container mx-auto max-w-3xl text-center">
-                <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold mb-4" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.3)' }}>
+                <h2 className={`text-3xl md:text-3xl lg:text-4xl font-bold mb-4 ${isDarkMode ? 'text-gray-100' : ''}`} style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.3)' }}>
                     {t('about.title')}
                 </h2>
 

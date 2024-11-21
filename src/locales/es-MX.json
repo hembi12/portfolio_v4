@@ -5,7 +5,9 @@
         "skills": "Habilidades",
         "projects": "Proyectos",
         "resume": "Currículum",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "tooltipDarkMode": "Modo oscuro",
+        "tooltipLightMode": "Modo claro"
     },
     "home": {
         "name": "Héctor Martil",

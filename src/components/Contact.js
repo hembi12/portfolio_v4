@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const Contact = () => {
+const Contact = ({ isDarkMode }) => {
     const { t } = useTranslation();
     const [formData, setFormData] = useState({
         name: '',
@@ -66,32 +66,24 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-20 bg-white px-6">
+        <section id="contact" className={`py-20 px-6 ${isDarkMode ? 'bg-gray-800 text-gray-200' : 'bg-white text-gray-900'}`}>
             <div className="container mx-auto max-w-lg">
-                <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-center mb-4" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.3)' }}>
+                <h2 className={`text-3xl md:text-3xl lg:text-4xl font-bold text-center mb-4 ${isDarkMode ? 'text-gray-100' : ''}`} style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.3)' }}>
                     {t('contact.title')}
                 </h2>
-                <p className="text-center text-gray-600 mb-6">
-                    {t('contact.description')} <a
-                        href="mailto:hectormartilb@gmail.com"
-                        className="text-indigo-500 underline relative group hover:text-indigo-700"
-                    >
-                        email
-                        <span className="absolute top-full mt-1 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            {t('contact.directEmail')}
-                        </span>
-                    </a>
+                <p className={`text-center mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                    {t('contact.description')}
                 </p>
                 {submitted && (
-                    <p className="text-green-500 text-center mb-4">{t('contact.successMessage')}</p>
+                    <p className={`text-center mb-4 ${isDarkMode ? 'text-green-400' : 'text-green-500'}`}>{t('contact.successMessage')}</p>
                 )}
                 <form onSubmit={handleSubmit} className="space-y-4 text-left">
                     <div>
-                        <label className="block text-gray-700 font-bold mb-2" htmlFor="name">{t('contact.form.name')}:</label>
+                        <label className={`block font-bold mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`} htmlFor="name">{t('contact.form.name')}:</label>
                         <input
                             type="text"
                             id="name"
-                            className="w-full px-3 py-2 border shadow-md rounded-lg"
+                            className={`w-full px-3 py-2 border shadow-md rounded-lg ${isDarkMode ? 'bg-gray-800 border-gray-600 text-gray-200' : ''}`}
                             placeholder={t('contact.form.namePlaceholder')}
                             value={formData.name}
                             onChange={handleChange}
@@ -99,11 +91,11 @@ const Contact = () => {
                         {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
                     </div>
                     <div>
-                        <label className="block text-gray-700 font-bold mb-2" htmlFor="email">{t('contact.form.email')}:</label>
+                        <label className={`block font-bold mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`} htmlFor="email">{t('contact.form.email')}:</label>
                         <input
                             type="email"
                             id="email"
-                            className="w-full px-3 py-2 border shadow-md rounded-lg"
+                            className={`w-full px-3 py-2 border shadow-md rounded-lg ${isDarkMode ? 'bg-gray-800 border-gray-600 text-gray-200' : ''}`}
                             placeholder={t('contact.form.emailPlaceholder')}
                             value={formData.email}
                             onChange={handleChange}
@@ -111,10 +103,10 @@ const Contact = () => {
                         {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                     </div>
                     <div>
-                        <label className="block text-gray-700 font-bold mb-2" htmlFor="subject">{t('contact.form.subject')}:</label>
+                        <label className={`block font-bold mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`} htmlFor="subject">{t('contact.form.subject')}:</label>
                         <select
                             id="subject"
-                            className="w-full px-3 py-2 border shadow-md rounded-lg bg-white"
+                            className={`w-full px-3 py-2 border shadow-md rounded-lg ${isDarkMode ? 'bg-gray-800 border-gray-600 text-gray-200' : ''}`}
                             value={formData.subject}
                             onChange={handleChange}
                         >
@@ -127,10 +119,10 @@ const Contact = () => {
                         {errors.subject && <p className="text-red-500 text-sm">{errors.subject}</p>}
                     </div>
                     <div>
-                        <label className="block text-gray-700 font-bold mb-2" htmlFor="message">{t('contact.form.message')}:</label>
+                        <label className={`block font-bold mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`} htmlFor="message">{t('contact.form.message')}:</label>
                         <textarea
                             id="message"
-                            className="w-full px-3 py-2 border shadow-md rounded-lg"
+                            className={`w-full px-3 py-2 border shadow-md rounded-lg ${isDarkMode ? 'bg-gray-800 border-gray-600 text-gray-200' : ''}`}
                             rows="5"
                             placeholder={t('contact.form.messagePlaceholder')}
                             value={formData.message}
@@ -138,7 +130,14 @@ const Contact = () => {
                         ></textarea>
                         {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
                     </div>
-                    <button type="submit" className="bg-indigo-600 text-white w-full md:w-auto px-6 py-2 font-semibold rounded-full shadow-lg hover:bg-indigo-800 hover:text-white hover:shadow-2xl transition-colors">
+                    <button
+                        type="submit"
+                        className={`w-full md:w-auto px-6 py-2 font-semibold rounded-full shadow-lg transition-colors ${
+                            isDarkMode
+                                ? 'bg-indigo-700 text-gray-200 hover:bg-indigo-600 hover:text-white'
+                                : 'bg-indigo-600 text-white hover:bg-indigo-800'
+                        }`}
+                    >
                         {t('contact.form.sendButton')}
                     </button>
                 </form>

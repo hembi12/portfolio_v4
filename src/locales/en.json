@@ -5,7 +5,9 @@
         "skills": "Skills",
         "projects": "Projects",
         "resume": "Resume",
-        "contact": "Contact"
+        "contact": "Contact",
+        "tooltipDarkMode": "Dark mode",
+        "tooltipLightMode": "Light mode"
     },
     "home": {
         "name": "Héctor Martil",

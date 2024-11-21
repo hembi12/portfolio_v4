@@ -13,6 +13,12 @@ import Footer from './components/Footer';
 
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.classList.toggle('dark'); // Cambia el modo oscuro en la raíz
+  };
 
   useEffect(() => {
     const handleScroll = throttle(() => {
@@ -27,22 +33,24 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className={`App ${isDarkMode ? 'dark' : ''}`}>
       {/* Barra de progreso de desplazamiento */}
       <div 
         className="fixed top-0 left-0 h-1 bg-indigo-500 z-50" 
         style={{ width: `${scrollProgress}%` }}
       ></div>
 
-      <Navbar />
+      {/* Pasamos toggleDarkMode y isDarkMode a Navbar */}
+      <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+      
       <div className="pt-16">
         {/* pt-16 para compensar el navbar fijo */}
-        <Home />
-        <About />
-        <Skills />
-        <Projects />
-        <Resume />
-        <Contact />
+        <Home isDarkMode={isDarkMode} />
+        <About isDarkMode={isDarkMode} />
+        <Skills isDarkMode={isDarkMode} />
+        <Projects isDarkMode={isDarkMode} />
+        <Resume isDarkMode={isDarkMode} />
+        <Contact isDarkMode={isDarkMode} />
       </div>
       <Footer />
     </div>
